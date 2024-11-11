@@ -1,0 +1,193 @@
+.seprate1 {
+  margin-top: 2rem;
+}
+
+.aboutinfo {
+  padding: 3rem;
+}
+
+.abouttitle h4 {
+  color: var(--dark-yellow);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.abouttitle h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.abouttitle h1 span {
+  color: var(--dark-yellow);
+}
+
+.abouttitle p {
+  color: black;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  padding: 6rem;
+  padding-top: 0rem;
+  padding-right: 0rem;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foreground-image {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  height: 40%;
+  object-fit: cover;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 1rem;
+  /* line-height: 30px; */
+  padding: 0 !important;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.list-item .rightarrow {
+  color: var(--dark-yellow);
+  font-size: 2rem;
+  margin-right: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.list-item:hover .rightarrow {
+  transform: scale(1.4);
+}
+
+.list-item b {
+  color: var(--dark-blue);
+}
+
+.Team-heading {
+  margin-top: 2rem !important;
+  text-align: center;
+}
+
+.Team-heading h4 {
+  color: var(--dark-yellow);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.Team-heading h1 {
+  color: black;
+  font-weight: bold;
+}
+
+.Team-heading h1 span {
+  color: var(--dark-yellow);
+}
+
+.card1 {
+  width: 100%;
+  aspect-ratio: 1 / 0.9;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card1 .image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card1 .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full card */
+  transition: 0.5s ease-in-out;
+}
+
+.card1 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0; /* Start with the text hidden */
+  transform: translateY(20px); /* Initially position the text below */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card1:hover .content {
+  opacity: 1; /* Fade in text on hover */
+  transform: translate(-50%, -50%) translateY(0); /* Center and bring text into view */
+}
+
+.card1:hover img {
+  filter: grayscale(1) brightness(0.4); /* Image effect on hover */
+}
+
+/* Optionally remove border effect if you no longer need it */
+.card1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+/* Text hover animation */
+.card1:hover .content h2,
+.card1:hover .content h6 {
+  opacity: 1;
+  transform: translateY(0); /* Bring text into view */
+}
+
+@media (max-width: 768px) {
+  .aboutinfo {
+    padding: 0;
+  }
+
+  .abouttitle h1 {
+    font-size: 2rem;
+  }
+
+  .abouttitle p {
+    font-size: 0.9rem;
+  }
+
+  .image-container {
+    padding: 1.5rem;
+  }
+
+  .foreground-image {
+    bottom: 23px;
+    left: 0;
+    height: 40%;
+  }
+
+  .list-item {
+    font-size: 14px;
+  }
+
+  .Team-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .card1 {
+    aspect-ratio: 1 / 0.9;
+  }
+}
