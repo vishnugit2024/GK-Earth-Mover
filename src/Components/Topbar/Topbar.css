@@ -251,7 +251,7 @@
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 3.5rem; /* Adjust spacing between links */
+  gap: 3.5rem; 
 }
 
 .menu-icon {
@@ -259,13 +259,13 @@
 }
 
 .hamburger-icon {
-  font-size: 2rem; /* Adjust the size as needed */
-  color: var(--dark-blue); /* Customize icon color */
+  font-size: 2rem; 
+  color: var(--dark-blue); 
   transition: transform 0.2s ease;
 }
 
 .hamburger-icon:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1); 
 }
 
 .link {
@@ -286,14 +286,14 @@
 .link li::before {
   content: "";
   position: absolute;
-  bottom: 0; /* Position underline at the bottom */
+  bottom: 0; 
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--dark-yellow); /* Underline color */
-  transform: scaleX(0); /* Start with the line hidden */
-  transform-origin: left; /* Animate from the left side */
-  transition: transform 0.3s ease; /* Smooth transition for the underline */
+  background: var(--dark-yellow); 
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.3s ease; 
 }
 
 /* Hover effect */
@@ -314,29 +314,29 @@
   margin-bottom: 0;
 }
 
-/* Styling for social media icons */
+
 .socialLink li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px; /* Define size of the circular border */
+  width: 35px; 
   height: 35px;
   font-size: 1rem;
-  color: white; /* Icon color */
+  color: white; 
   background-color: var(
     --dark-blue
-  ); /* Background color for the circular border */
-  border-radius: 50%; /* Makes the element circular */
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  border: 2px solid transparent; /* Transparent border initially */
+  ); 
+  border-radius: 50%; 
+  transition: all 0.3s ease; 
+  border: 2px solid transparent; 
 }
 
-/* Hover effect for the social media icons */
+
 .socialLink li a:hover {
-  background-color: white; /* Change background color on hover */
-  color: var(--dark-blue); /* Change icon color on hover if needed */
-  border-color: var(--primary-color); /* Add a border on hover */
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  background-color: white; 
+  color: var(--dark-blue); 
+  border-color: var(--primary-color); 
+  transform: scale(1.1); 
 }
 
 @media (max-width: 1080px) {
@@ -345,14 +345,14 @@
   }
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
   .webname h1 {
     font-size: 15px;
   }
 
   .navlinks .link {
-    gap: 2rem; /* Reduce gap between links for tablet */
+    gap: 2rem; 
   }
 
   .link li {
@@ -392,11 +392,13 @@
     clip-path: none;
     /* padding: 0 !important; */
     padding-top: 1rem;
+    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 5rem;
   }
 
   .navlinks.active {
     width: 200px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .navlinks .link {
